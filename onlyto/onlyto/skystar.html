@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>今晚，整片星空将为你一人闪烁</title>
+    <style>
+      #videofilm {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        z-index: -1;
+      }
+      h1{
+        font-size: 36px;
+        color: #deaff1;
+        font-family: '楷体';
+      }
+      a{
+        text-decoration: none;
+        opacity: 0;
+        transition: opacity 1s ease;
+      }
+
+      .show{
+        opacity: 1;
+      }
+
+      .textfour{
+        margin-top:-130px;
+      }
+    </style>
+    <link rel="stylesheet" href="css/skystar.css">
+  </head>
+  <body>
+    <video id="videofilm" poster="img/skystar2.jpg" autoplay muted loop>
+      <source src="video/skystar.mp4" type="video/mp4">
+    </video>
+    <div class="textone">
+      <h1>look at the stars</h1>
+    </div>
+    <div class="texttwo">
+      <h1>look how they shine for u</h1>
+    </div>
+    <div class="textfour">
+      <h1><a id="myshow" href="../sjy/sjy/0.1.html">苏靖尧，生日快乐！</a></h1>
+    </div>
+    <div class="textthree">
+      <h1></h1>
+    </div>
+    <audio id="bgmusic" src="video/3796224680.mp3" autoplay="autoplay" loop="loop" style="display: block; width: 3%; height:3%;"></audio>
+    <script type="text/javascript">
+      function toggleSound() {
+                var music = document.getElementById("bgmusic");//获取ID
+                    console.log(music);
+                    console.log(music.paused);
+                if (music.paused) { //判读是否播放
+                    music.paused=false;
+                    music.play(); //没有就播放
+                }
+            }
+    setInterval("toggleSound()",1);
+
+    setTimeout(function () {
+      document.getElementById("myshow").classList.add("show");
+    },112500);
+    </script>
+    <img src="1.jpg" alt="">
+    
+    
+    <div class="container"></div>
+    <script src="js/skystar.js"></script>
+    
+    
+  </body>
+</html>
