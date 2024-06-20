@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     body{
+            background: url(.//微信图片_20240620162152.jpg) no-repeat;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-attachment: fixed;
+
+        }
+    *{
+        padding: 0;
+        margin:0;
+
+    }
+    body{
+        background-color: #0954e3;
+        width: 100vw;
+        height:100vh;
+        display: flex;
+        justify-content: right;
+        align-items: right;
+
+    }
+    ul{
+        list-style: none;
+        width: 243px;
+        height: 350px;
+        transform-style: preserve-3d;
+        perspective: 900px;
+        transition: 1.5s;
+        margin-top: 200px;
+        margin-right: 200px;
+    }
+    ul:hover{
+        transform: translateX(150px);
+    }
+    li{
+        position: absolute;
+        transform-origin: left;
+    }
+    li:nth-child(1){
+        transform:rotateY(-25deg);
+        transition: 2.3s;
+    }
+    li:nth-child(2){
+        transform:rotateY(-25deg);
+        transition: 2s;
+    }
+    li:nth-child(3){
+        transform:rotateY(-25deg);
+        transition: 1.7s;
+    }
+    li:nth-child(4){
+        transform:rotateY(-25deg);
+        transition: 1.4s;
+    }
+    li:nth-child(5){
+        transform:rotateY(-25deg);
+        transition: 1.1s;
+    }
+    li:nth-child(6){
+        transform:rotateY(-25deg);
+        transition: 0.8s;
+    }
+    li:nth-child(7){
+        transform:rotateY(-13deg);
+        transition: 0.5s;
+    }
+    ul:hover li:nth-child(1){
+        transform: rotateY(-180deg);
+        transition: 1.4s;
+    }
+    ul:hover li:nth-child(2){
+        transform: rotateY(-180deg);
+        transition: 2.0s;
+    }
+    ul:hover li:nth-child(3){
+        transform: rotateY(-180deg);
+        transition: 2.6s;
+    }
+    ul:hover li:nth-child(4){
+        transform: rotateY(-180deg);
+        transition: 3.2s;
+    }
+    ul:hover li:nth-child(5){
+        transform: rotateY(-180deg);
+        transition:  3.8s;
+    }
+    ul:hover li:nth-child(6){
+        transform: rotateY(-180deg);
+        transition: 4.4s;
+    }
+    ul:hover li:nth-child(7){
+        transform: rotateY(-180deg);
+        transition: 5.0s;
+    }
+    img{
+        width: 243px;
+        height: 350px;
+        box-shadow: 1px 4px 5px;
+    }
+</style>
+<body>
+    <ul>
+        <li><img src=".//078861621b019be2fc0f3382a83866f.jpg" alt=""></li>
+        <li><img src=".//323fd52bbea2cc01360c3943cce5d83.jpg" alt=""></li>
+        <li><img src=".//8b4fa6322e97f11c5b6318e18bf8ab2.jpg" alt=""></li>
+        <li><img src=".//988133edd08135fc0d82201812747dd.jpg" alt=""></li>
+        <li><img src=".//9f84c5119f75f8ca0c68da452b32d1c.jpg" alt=""></li>
+        <li><img src=".//d2c53684979ecefd929760ca1257e88.jpg" alt=""></li>
+    </ul>
+    <audio id="bgmusic" src=".//2698707808.mp3" autoplay="autoplay" loop="loop" style="display: block; width: 3%; height:3%;"></audio>
+    <script type="text/javascript">
+      function toggleSound() {
+                var music = document.getElementById("bgmusic");//获取ID
+                    console.log(music);
+                    console.log(music.paused);
+                if (music.paused) { //判读是否播放
+                    music.paused=false;
+                    music.play(); //没有就播放
+                }
+            }
+    setInterval("toggleSound()",1);
+
+    setTimeout(function () {
+      document.getElementById("myshow").classList.add("show");
+    },112500);
+    </script>
+    
+    
+
+    
+</body>
+</html>
